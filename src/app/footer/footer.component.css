@@ -1,0 +1,23 @@
+@keyframes colorChange {
+    0% {
+        color: #d34a4a;
+        /* Start color */
+    }
+
+    50% {
+        color: #ffe3a4;
+        /* Mid-transition color */
+    }
+
+    100% {
+        color: #4a77d3;
+        /* End color */
+    }
+}
+
+.glow {
+    animation-name: colorChange;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

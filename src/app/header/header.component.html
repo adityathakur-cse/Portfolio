@@ -1,0 +1,63 @@
+<nav class="bg-transparent backdrop-filter backdrop-blur-sm fixed w-full z-40 top-0 start-0">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <h2 class="font-bold text-sky-800 text-[25px] lg:text-[20px]"
+            (click)="confettiService.clickPopper()"><a routerLink="/home">Aditya Kumar Thakur</a>
+        </h2>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse" (click)="toggleMenu()">
+            <div class="flex gap-2 items-center" (click)="confettiService.clickPopper()">
+                <img class="w-full h-full object-contain" src="assets/img/india.svg" alt="tech">
+                <p class="text-sm font-mono text-gray-900 dark:text-white mr-2">India</p>
+            </div>
+            <button data-collapse-toggle="navbar-sticky" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-sticky" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky"
+            [ngClass]="{'hidden': !isMenuOpen}">
+            <ul
+                class="flex flex-col md:p-1 mt-2 rounded-[20px] md:rounded-[30px] md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 border-[1px] border-gray-300 dark:border-gray-700 text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-blue-600 font-playwrite">
+                <a routerLink="/home" routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700"
+                    (click)="closeMenu()">
+                    <li class="rounded-full text-center px-4 m-1 transition duration-300 ease-in-out click-animation">
+                        <span> Home </span>
+                    </li>
+                </a>
+                <a routerLink="/about"
+                    routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700">
+                    <li class="rounded-full text-center px-4 m-1 transition duration-300 ease-in-out click-animation"
+                        (click)="closeMenu()">
+                        <span> About </span>
+                    </li>
+                </a>
+                <a routerLink="/tools" routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700"
+                    (click)="closeMenu()">
+                    <li class="rounded-full text-center px-4 m-1 transition duration-300 ease-in-out click-animation">
+                        <span> Tools </span>
+                    </li>
+                </a>
+                <a routerLink="/projects"
+                    routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700"
+                    (click)="closeMenu()">
+                    <li class="rounded-full text-center px-4 m-1 transition duration-300 ease-in-out click-animation">
+                        <span> Projects </span>
+                    </li>
+                </a>
+                <!-- <a routerLink="/blogs" routerLinkActive="rounded-full border-[1px] border-gray-300 dark:border-gray-700"
+                    (click)="closeMenu()">
+                    <li class="rounded-full text-center px-4 m-1 transition duration-300 ease-in-out click-animation">
+                        <span> Blogs </span>
+                    </li>
+                </a> -->
+            </ul>
+        </div>
+
+    </div>
+</nav>
