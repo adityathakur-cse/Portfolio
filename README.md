@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
 
-![myportfolio](https://github.com/user-attachments/assets/e6f6197b-dd8c-48e9-b4f2-24c10f3b73c5)
+![myportfolio](src/assets/img/portfolio.png)
 
 ## Development server
 
